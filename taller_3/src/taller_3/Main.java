@@ -3,6 +3,7 @@ package taller_3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -14,6 +15,7 @@ public class Main {
 		p1.playList.add(new newSong(4,"mexico go", "2008", 4.23, "classic", "mexicogo.png", "mexico go", "carmen tinds", "sergio tusk"));
 		p1.playList.add(new newSong(5,"antartica", "2011", 1.13, "pop", "antartica.png", "antartica", "luis sands", "milena cess"));
 
+        //p1.playList.sort(Comparator.comparing());
         List lista = Arrays.asList(p1);
         Collections.sort(lista);
         //Arrays.sort(p1.playList);;

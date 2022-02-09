@@ -1,13 +1,19 @@
 package taller_3;
 
 
+import java.util.Date;
+
 /**
- * class song
  * Basic attributes of a single song
  *
- * @author Daniel Granados
+ * Ej:
+ *  Song classEJ = new Song(arg...);
+ *  classEJ.setProperty(value);
+ *
  * @version 1.0.0 02-09-2021
+ * @author Daniel Granados
  * @since 1.0.0
+ *
  */
 abstract class Song {
     private int id;
@@ -25,7 +31,7 @@ abstract class Song {
      *
      * @param id Int
      * @param title String
-     * @param releaseDate String
+     * @param releaseDate Date
      * @param duration Double
      * @param genre String
      * @param cover String
@@ -33,7 +39,9 @@ abstract class Song {
      * @param author Who compose the song
      * @param artist Who sings the song
      */
-    public Song(int id, String title, String releaseDate, Double duration, String genre, String cover, String description, String author, String artist) {
+    public Song(int id, String title, String releaseDate, Double duration, String genre,
+                String cover, String description, String author, String artist)
+    {
         this.id = id;
         this.title = title;
         this.releaseDate = releaseDate;
@@ -207,11 +215,14 @@ abstract class Song {
         this.artist = artist;
     }
 
+    /**
+     * Print data of each song
+     */
     void printData(){
-        System.out.printf("id: %d"+" - title: %s%n", id, title);
-        System.out.printf("release day: %s"+" - duration: %s%n", releaseDate, duration);
-        System.out.printf("genre: %s"+" - cover: %s%n", genre, cover);
-        System.out.printf("description: %s%n",description);
-        System.out.printf("author: %s"+" - artist: %s%n", author, artist);
+        System.out.printf("id: %d"+" - título: %s%n", id, title);
+        System.out.printf("día de lanzamiento: %s"+" - duración: %s%n", releaseDate, duration);
+        System.out.printf("género: %s"+" - caratula: %s%n", genre, cover);
+        System.out.printf("descripción: %s%n",description);
+        System.out.printf("autor: %s"+" - artista: %s%n", author, artist);
     }
 }
