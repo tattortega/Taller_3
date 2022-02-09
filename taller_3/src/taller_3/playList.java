@@ -1,6 +1,7 @@
 package taller_3;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class playList implements ISong{
@@ -22,7 +23,13 @@ public class playList implements ISong{
 
     @Override
     public double orderByDuration() {
-        return 0;
+        
+        for (newSong song : playList) {
+            double order = song.getDuration();
+            //playList.get(1).getDuration();
+        }
+        var order = playList.get(0).getDuration();
+        return order;
     }
 
     @Override
@@ -31,7 +38,9 @@ public class playList implements ISong{
     }
 
     @Override
-    public List<newSong> playlist() { return null; }
+    public playList playlist() { 
+        return null; 
+    }
 
 }
 

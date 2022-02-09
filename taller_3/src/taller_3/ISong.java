@@ -39,6 +39,6 @@ public interface ISong {
      * Method to create playlist of specific songs
      * @return Songs of the created playlist 
      */
-    List<newSong> playlist();
+    playList playlist();
 
 }
