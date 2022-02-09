@@ -2,7 +2,6 @@ package taller_3;
 
 
 /**
- * class song
  * Basic attributes of a single song
  *
  * Ej:
@@ -12,6 +11,7 @@ package taller_3;
  * @version 1.0.0 02-09-2021
  * @author Daniel Granados
  * @since 1.0.0
+ *
  */
 abstract class Song {
     private int id;

@@ -43,6 +43,6 @@ public interface ISong {
      * Method to create playlist of specific songs
      * @return Songs of the created playlist 
      */
-    playList playlist();
+    int[] newPlaylistWithSongs();
 
 }
