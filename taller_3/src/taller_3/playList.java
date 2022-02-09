@@ -31,7 +31,9 @@ public class playList implements ISong{
     }
 
     @Override
-    public List<newSong> playlist() { return null; }
+    public playList playlist() {
+        return null;
+    }
 
 }
 

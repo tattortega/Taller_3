@@ -5,8 +5,12 @@ import java.util.List;
 
 /**
  * Interface to implement filtering and search methods
- * @author Ricardo Ortega
+ *
+ * Ej:
+ *  class ejClass implements ISong{}
+ *
  * @version 1.0.0 2022/02/09
+ * @author Ricardo Ortega
  * @since 1.0.0
  */
 public interface ISong {
@@ -39,6 +43,6 @@ public interface ISong {
      * Method to create playlist of specific songs
      * @return Songs of the created playlist 
      */
-    List<newSong> playlist();
+    playList playlist();
 
 }

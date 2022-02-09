@@ -1,9 +1,15 @@
 package taller_3;
 
-
-import java.util.ArrayList;
-
+/**
+ * create a new song
+ * ej:
+ * newSong sg1 = new newSong(id, title, etc...);
+ *
+ * @version 1.0.0 02-09-2021
+ * @since 1.0.0
+ */
 public class newSong extends Song{
+
     /**
      * Song constructor
      *
@@ -17,10 +23,17 @@ public class newSong extends Song{
      * @param author      Who compose the song
      * @param artist      Who sings the song
      */
-    public newSong(int id, String title, String releaseDate, Double duration, String genre, String cover, String description, String author, String artist) {
+    public newSong(int id, String title, String releaseDate, Double duration,
+                   String genre, String cover, String description,
+                   String author, String artist)
+    {
         super(id, title, releaseDate, duration, genre, cover, description, author, artist);
     }
 
+    /**
+     * polymorphism
+     * print song data
+     */
     @Override
     void printData() {
         super.printData();
