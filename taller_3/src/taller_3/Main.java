@@ -27,7 +27,7 @@ public class Main {
         printInstructions();
 
         playList mainLibrary = new playList(new ArrayList<>());
-        mainLibrary.playList.add(new newSong(1,"hello you", "2009", 3.15, "pop",
+        mainLibrary.playList.add(new newSong(1,"hello you", "2020", 3.15, "pop",
                 "helloyou.png", "about you", "jhon doe", "jhon smit"));
         mainLibrary.playList.add(new newSong(2,"among us", "2012", 2.13, "jazz",
                 "amongus.png", "among us", "jhon doe", "celina osk"));
@@ -55,12 +55,7 @@ public class Main {
 				mainLibrary.newPlaylistWithSongs();
 			}
 			else if("2".equals(option)){
-				for (newSong song: mainLibrary.playList) {
-					int songId = song.getId();
-					if (songId == 1){
-						mainLibrary.playList.add(song);
-					}
-				}
+				mainLibrary.filterByGenre();
 			}
 		}while("1".equals(option));
 	}

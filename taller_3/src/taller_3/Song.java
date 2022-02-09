@@ -1,6 +1,8 @@
 package taller_3;
 
 
+import java.util.Date;
+
 /**
  * Basic attributes of a single song
  *
@@ -29,7 +31,7 @@ abstract class Song {
      *
      * @param id Int
      * @param title String
-     * @param releaseDate String
+     * @param releaseDate Date
      * @param duration Double
      * @param genre String
      * @param cover String

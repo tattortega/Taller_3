@@ -17,9 +17,9 @@ public interface ISong {
     
     /**
      * Method to filter songs by genre
-     * @return Songs by filtered genre
+     * print Songs by filtered genre
      */
-    String filterByGenre();
+    void filterByGenre();
     
     /**
      * Method to filter songs by year

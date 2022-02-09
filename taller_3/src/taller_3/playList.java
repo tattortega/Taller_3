@@ -13,8 +13,16 @@ public class playList implements ISong{
     }
 
     @Override
-    public String filterByGenre() {
-        return null;
+    public void filterByGenre() {
+        Scanner inputGenre = new Scanner(System.in);
+        String songGenre = inputGenre.nextLine();
+        for (newSong song: playList) {
+            if(song.getGenre().equals(songGenre)){
+                System.out.println("\n");
+                song.printData();
+            }
+        }
+        System.out.println("No se encontro ninguna coincidencia");
     }
 
     @Override
