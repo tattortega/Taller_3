@@ -1,6 +1,5 @@
 package taller_3;
 
-import java.util.Date;
 
 /**
  * class song
@@ -13,7 +12,7 @@ import java.util.Date;
 abstract class Song {
     private int id;
     private String title;
-    private Date releaseDate;
+    private String releaseDate;
     private Double duration;
     private String genre;
     private String cover;
@@ -34,7 +33,7 @@ abstract class Song {
      * @param author Who compose the song
      * @param artist Who sings the song
      */
-    public Song(int id, String title, Date releaseDate, Double duration, String genre, String cover, String description, String author, String artist) {
+    public Song(int id, String title, String releaseDate, Double duration, String genre, String cover, String description, String author, String artist) {
         this.id = id;
         this.title = title;
         this.releaseDate = releaseDate;
@@ -87,7 +86,7 @@ abstract class Song {
      * @return
      * Release date of the song
      */
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
@@ -96,7 +95,7 @@ abstract class Song {
      * Release date
      * @param releaseDate Date
      */
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 
