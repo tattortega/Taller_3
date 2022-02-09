@@ -25,7 +25,7 @@ abstract class Song {
      *
      * @param id Int
      * @param title String
-     * @param releaseDate Date
+     * @param releaseDate String
      * @param duration Double
      * @param genre String
      * @param cover String
@@ -205,5 +205,13 @@ abstract class Song {
      */
     public void setArtist(String artist) {
         this.artist = artist;
+    }
+
+    void printData(){
+        System.out.printf("id: %d"+" - title: %s%n", id, title);
+        System.out.printf("release day: %s"+" - duration: %s%n", releaseDate, duration);
+        System.out.printf("genre: %s"+" - cover: %s%n", genre, cover);
+        System.out.printf("description: %s%n",description);
+        System.out.printf("author: %s"+" - artist: %s%n", author, artist);
     }
 }
