@@ -83,7 +83,7 @@ public class PlayList implements ISong{
     public void orderByDuration(ArrayList<newSong> list) {
         list.sort((songA, songB)
                   -> songA.getDuration().compareTo(songB.getDuration())
-                  );
+        );
         System.out.println("\n Playlist ordenada por duración de canción \n");
         for(newSong song: playList){
             song.printData();

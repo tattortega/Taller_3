@@ -17,12 +17,13 @@ public interface ISong {
     
     /**
      * Method to filter songs by genre
-     * print Songs by filtered genre
+     * prints Songs by filtered genre
      */
     void filterByGenre();
     
     /**
      * Method to filter songs by year
+     * Prints Songs by filtered year
      */
     void filterByYear();
     
