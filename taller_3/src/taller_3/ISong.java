@@ -30,13 +30,13 @@ public interface ISong {
      * Method to sort songs by duration
      * @return Songs sorted in ascending order of duration
      */
-    double orderByDuration();
+    void orderByDuration();
     
     /**
      * Method to sort songs by date
      * @return Songs sorted by date ascendingly
      */
-    String orderByDate();
+    void orderByDate();
     
     /**
      * Method to create playlist of specific songs

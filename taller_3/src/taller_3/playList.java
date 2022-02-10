@@ -48,19 +48,18 @@ public class playList implements ISong{
     }
 
     @Override
-    public double orderByDuration() {
-        
+    public void orderByDuration() {       
         for (newSong song : playList) {
-            double order = song.getDuration();
-            //playList.get(1).getDuration();
+            double duration = playList.get(1).getDuration();
+            playList.sort(song.getDuration(), duration);
+            order = song.getDuration();
+            
         }
         var order = playList.get(0).getDuration();
-        return order;
     }
 
     @Override
-    public String orderByDate() {
-        return null;
+    public void orderByDate() {
     }
 
     @Override
