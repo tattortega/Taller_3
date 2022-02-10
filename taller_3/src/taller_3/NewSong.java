@@ -5,10 +5,10 @@ package taller_3;
  * ej:
  * newSong sg1 = new newSong(id, title, etc...);
  *
- * @version 1.0.0 02-09-2021
+ * @version 1.0.0 02-09-2022
  * @since 1.0.0
  */
-public class newSong extends Song{
+public class NewSong extends Song{
 
     /**
      * Song constructor
@@ -23,7 +23,7 @@ public class newSong extends Song{
      * @param author      Who compose the song
      * @param artist      Who sings the song
      */
-    public newSong(int id, String title, String releaseDate, Double duration,
+    public NewSong(int id, String title, String releaseDate, Double duration,
                    String genre, String cover, String description,
                    String author, String artist)
     {

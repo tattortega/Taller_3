@@ -8,7 +8,7 @@ package taller_3;
  *  Song classEJ = new Song(arg...);
  *  classEJ.setProperty(value);
  *
- * @version 1.0.0 02-09-2021
+ * @version 1.0.0 02-09-2022
  * @author Daniel Granados
  * @since 1.0.0
  *

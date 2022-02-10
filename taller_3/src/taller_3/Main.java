@@ -6,6 +6,10 @@ import java.util.Scanner;
 /**
  * Main class
  * The program runs from here
+ *
+ * @version 1.0.0 02-10-2022
+ * @author Daniel Granados - Ricardo Ortega
+ * @since 1.0.0
  */
 public class Main {
 
@@ -42,24 +46,24 @@ public class Main {
         printInstructions();
 
         PlayList mainLibrary = new PlayList(new ArrayList<>());
-        mainLibrary.playList.add(new newSong(1,"hello you", "2020", 3.15, "pop",
+        mainLibrary.playList.add(new NewSong(1,"hello you", "2020", 3.15, "pop",
                 "helloyou.png", "about you", "jhon doe", "jhon smit"));
-        mainLibrary.playList.add(new newSong(2,"among us", "2012", 2.13, "jazz",
+        mainLibrary.playList.add(new NewSong(2,"among us", "2012", 2.13, "jazz",
                 "amongus.png", "among us", "jhon doe", "celina osk"));
-        mainLibrary.playList.add(new newSong(3,"tell the truth", "2005", 3.11, "rock",
+        mainLibrary.playList.add(new NewSong(3,"tell the truth", "2005", 3.11, "rock",
                 "tellthetruth.png", "tell the truth us", "alicio mark", "jaime toll"));
-        mainLibrary.playList.add(new newSong(4,"mexico go", "2008", 4.23, "classic",
+        mainLibrary.playList.add(new NewSong(4,"mexico go", "2008", 4.23, "classic",
                 "mexicogo.png", "mexico go", "carmen tinds", "sergio tusk"));
-        mainLibrary.playList.add(new newSong(5,"antartica", "2011", 1.13, "pop",
+        mainLibrary.playList.add(new NewSong(5,"antartica", "2011", 1.13, "pop",
                 "antartica.png", "antartica", "luis sands", "milena cess"));
-        mainLibrary.playList.add(new newSong(6,"in the end", "2004", 4.25, "rock",
+        mainLibrary.playList.add(new NewSong(6,"in the end", "2004", 4.25, "rock",
                 "intheend.png", "in the end", "chester benington", "linkin park"));
-	mainLibrary.playList.add(new newSong(7,"bangarag", "2008", 3.57, "electronic",
+	mainLibrary.playList.add(new NewSong(7,"bangarag", "2008", 3.57, "electronic",
                 "bangarag.png", "bangarag", "skryllex", "skryllex"));			
-	mainLibrary.playList.add(new newSong(8,"sin ti sin mi", "2014", 3.33, "pop rock",
+	mainLibrary.playList.add(new NewSong(8,"sin ti sin mi", "2014", 3.33, "pop rock",
                 "sintisinmi.png", "sin ti sin mi", "bako", "the mills"));
 		
-		for (newSong song: mainLibrary.playList) {
+		for (NewSong song: mainLibrary.playList) {
 			song.printData();
 			System.out.print("\n--------------\n");
 		}
