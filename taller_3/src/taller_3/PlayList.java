@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 /**
  * Create playlist with methods to filter or search
- *
  * EJ:
  *   playList p1 = new playList(new ArrayList<>());
  *   p1.filterByGenre();
@@ -16,16 +15,18 @@ import java.util.Scanner;
  * @author Daniel Granados - Ricardo Ortega
  * @since 1.0.0
  */
-public class playList implements ISong{
+public class PlayList implements ISong{
     ArrayList<newSong> playList;
 
     /**
      * PlayList constructor
      * @param playList ArrayList<>();
      */
-    public playList(ArrayList<newSong> playList) {
+    public PlayList(ArrayList<newSong> playList) {
         this.playList = playList;
     }
+
+
 
     /**
      * Polymorphism -
@@ -36,18 +37,17 @@ public class playList implements ISong{
     public void filterByGenre() {
         Scanner inputGenre = new Scanner(System.in);
         String songGenre = inputGenre.nextLine();
-        int hasMatch = 0;
+        int anyMatch = 0;
         for (newSong song: playList) {
-            if(song.getGenre().equals(songGenre)){
+            if(songGenre.equals(song.getGenre())){
                 System.out.println("\n");
                 song.printData();
-                hasMatch +=1;
+                anyMatch +=1;
             }
         }
-        if (hasMatch == 0){
+        if (anyMatch == 0){
             System.out.println("No se encontro ninguna coincidencia");
         }
-        
     }
 
     /**
@@ -59,15 +59,15 @@ public class playList implements ISong{
     public void filterByYear() {
         Scanner inputYear = new Scanner(System.in);
         String songYear = inputYear.nextLine();
-        int hasMatch = 0;
+        int anyMatch = 0;
         for (newSong song: playList) {
-            if (song.getReleaseDate().equals(songYear)){
+            if (songYear.equals(song.getReleaseDate())){
                 System.out.println("\n");
                 song.printData();
-                hasMatch +=1;
+                anyMatch +=1;
             }
         }
-        if (hasMatch == 0){
+        if (anyMatch == 0){
             System.out.println("No se encontro ninguna coincidencia");
         }
     }
@@ -92,12 +92,11 @@ public class playList implements ISong{
      * Polymorphism -
      * Create a new playList with selected songs. -
      * Prints the new playList with the new songs.
-     *
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays">Array Stream()</a>
      */
     @Override
     public void newPlaylistWithSongs() {
-        playList newPlayList = new playList(new ArrayList<>());
+        PlayList newPlayList = new PlayList(new ArrayList<>());
         int songsQuantity;
         Scanner inputSongs = new Scanner(System.in);
         System.out.println("Escribe cuantas canciones vas a agregar? \n"+"Luego el Id de las canciones");
