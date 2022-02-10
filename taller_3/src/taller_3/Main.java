@@ -59,7 +59,7 @@ public class Main {
 	    mainLibrary.playList.add(new newSong(8,"sin ti sin mi", "2014", 3.33, "pop rock",
                 "sintisinmi.png", "sin ti sin mi", "bako", "the mills"));
 		
-		for(newSong song: mainLibrary.playList){
+		for (newSong song: mainLibrary.playList) {
 			song.printData();
 			System.out.print("\n--------------\n");
 		}
@@ -67,29 +67,25 @@ public class Main {
 		Scanner inputOption = new Scanner(System.in);
 		String option;
 
-		do{
+		do {
 			printInstructions();
 			String inputUser = inputOption.nextLine();
 			String[] splitInputUser;
 			splitInputUser = inputUser.split("\\s+");
 			option = splitInputUser[0];
 
-			if ("1".equals(option)){
+			if ("1".equals(option)) {
 				mainLibrary.newPlaylistWithSongs();
-			}
-			else if("2".equals(option)){
+			} else if ("2".equals(option)) {
 				mainLibrary.filterByGenre();
-			}
-			else if("3".equals(option)){
+			} else if ("3".equals(option)) {
                 mainLibrary.filterByYear();
-            }
-			else if("4".equals(option)){
+            } else if ("4".equals(option)) {
 				mainLibrary.orderByDuration(mainLibrary.playList);
-			}
-			else if("5".equals(option)){
+			} else if ("5".equals(option)) {
 				mainLibrary.orderByDate(mainLibrary.playList);
 			}
 
-		}while(Integer.parseInt(option) < 6);
+		} while (Integer.parseInt(option) < 6);
 	}
 }

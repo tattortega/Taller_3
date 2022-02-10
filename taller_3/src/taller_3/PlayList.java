@@ -40,13 +40,13 @@ public class PlayList implements ISong{
         int anyMatch = 0;
         System.out.println("\n Playlist filtrada por género \n");
         for (newSong song: playList) {
-            if(songGenre.equals(song.getGenre())){
+            if (songGenre.equals(song.getGenre())) {
                 song.printData();
                 System.out.println("\n");
                 anyMatch +=1;
             }
         }
-        if (anyMatch == 0){
+        if (anyMatch == 0) {
             System.out.println("No se encontro ninguna coincidencia");
         }
     }
@@ -63,13 +63,13 @@ public class PlayList implements ISong{
         int anyMatch = 0;
         System.out.println("\n Playlist filtrada por año \n");
         for (newSong song: playList) {
-            if (songYear.equals(song.getReleaseDate())){                
+            if (songYear.equals(song.getReleaseDate())) {
                 song.printData();
                 System.out.println("\n");
                 anyMatch +=1;
             }
         }
-        if (anyMatch == 0){
+        if (anyMatch == 0) {
             System.out.println("No se encontró ninguna coincidencia");
         }
     }
@@ -85,7 +85,7 @@ public class PlayList implements ISong{
                   -> songA.getDuration().compareTo(songB.getDuration())
         );
         System.out.println("\n Playlist ordenada por duración de canción \n");
-        for(newSong song: playList){
+        for (newSong song: playList) {
             song.printData();
             System.out.print("\n--------------\n");
         }
@@ -102,7 +102,7 @@ public class PlayList implements ISong{
                 -> songA.getReleaseDate().compareTo(songB.getReleaseDate())
         );
         System.out.println("\n Playlist ordenada por año \n");
-        for(newSong song: playList){
+        for (newSong song: playList) {
             song.printData();
             System.out.print("\n--------------\n");
         }
@@ -122,6 +122,7 @@ public class PlayList implements ISong{
         System.out.println("Escribe cuantas canciones vas a agregar? \n"+"Luego el Id de las canciones");
         songsQuantity = inputSongs.nextInt();
         int[] songsToAdd = new int[5];
+
         for (int i = 0; i < songsQuantity; i++) {
            try {
             songsToAdd[i]=inputSongs.nextInt();
@@ -129,14 +130,16 @@ public class PlayList implements ISong{
                System.out.println("exception: "+ e.getMessage() + " debe ser un entero no texto");
            }
         }
+
         for (newSong song: playList) {
             int songId = song.getId();
-            if (Arrays.stream(songsToAdd).anyMatch(i -> i == songId)){
+            if (Arrays.stream(songsToAdd).anyMatch(i -> i == songId)) {
                 newPlayList.playList.add(song);
             }
         }
+
         System.out.println("\n Nueva Playlist creada \n");
-        for(newSong song: newPlayList.playList){
+        for (newSong song: newPlayList.playList) {
             song.printData();
             System.out.print("\n--------------\n");
         }
