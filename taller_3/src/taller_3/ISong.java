@@ -1,7 +1,5 @@
 package taller_3;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Interface to implement filtering and search methods
@@ -28,20 +26,20 @@ public interface ISong {
     
     /**
      * Method to sort songs by duration
-     * @return Songs sorted in ascending order of duration
+     * Print Songs sorted in ascending order of duration
      */
-    double orderByDuration();
+    void orderByDuration();
     
     /**
      * Method to sort songs by date
-     * @return Songs sorted by date ascendingly
+     * Print Songs sorted by date ascendingly
      */
-    String orderByDate();
+    void orderByDate();
     
     /**
      * Method to create playlist of specific songs
-     * @return Songs of the created playlist 
+     * Print Songs of the created playlist
      */
-    int[] newPlaylistWithSongs();
+    void newPlaylistWithSongs();
 
 }

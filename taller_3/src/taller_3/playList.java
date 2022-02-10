@@ -48,23 +48,23 @@ public class playList implements ISong{
     }
 
     @Override
-    public double orderByDuration() {
+    public void orderByDuration() {
         
         for (newSong song : playList) {
             double order = song.getDuration();
             //playList.get(1).getDuration();
         }
         var order = playList.get(0).getDuration();
-        return order;
+        //
     }
 
     @Override
-    public String orderByDate() {
-        return null;
+    public void orderByDate() {
+       //
     }
 
     @Override
-    public int[] newPlaylistWithSongs() {
+    public void newPlaylistWithSongs() {
         playList newPlayList = new playList(new ArrayList<>());
         int askSongs;
         Scanner inputSongs = new Scanner(System.in);
@@ -88,7 +88,6 @@ public class playList implements ISong{
             song.printData();
             System.out.print("\n--------------\n");
         }
-        return songsToAdd;
     }
 
 }
