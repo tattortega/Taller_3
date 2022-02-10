@@ -5,13 +5,33 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 
+/**
+ * Create playlist with methods to filter or search
+ *
+ * EJ:
+ *   playList p1 = new playList(new ArrayList<>());
+ *   p1.filterByGenre();
+ *
+ * @version 1.0.0 02-10-2022
+ * @author Daniel Granados - Ricardo Ortega
+ * @since 1.0.0
+ */
 public class playList implements ISong{
     ArrayList<newSong> playList;
 
+    /**
+     * PlayList constructor
+     * @param playList ArrayList<>();
+     */
     public playList(ArrayList<newSong> playList) {
         this.playList = playList;
     }
 
+    /**
+     * Polymorphism -
+     * Filters songs by genre. -
+     * Prints the coincidences.
+     */
     @Override
     public void filterByGenre() {
         Scanner inputGenre = new Scanner(System.in);
@@ -30,6 +50,11 @@ public class playList implements ISong{
         
     }
 
+    /**
+     * Polymorphism -
+     * Filters songs by year. -
+     * Prints the coincidences.
+     */
     @Override
     public void filterByYear() {
         Scanner inputYear = new Scanner(System.in);
@@ -63,15 +88,22 @@ public class playList implements ISong{
        //
     }
 
+    /**
+     * Polymorphism -
+     * Create a new playList with selected songs. -
+     * Prints the new playList with the new songs.
+     *
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays">Array Stream()</a>
+     */
     @Override
     public void newPlaylistWithSongs() {
         playList newPlayList = new playList(new ArrayList<>());
-        int askSongs;
+        int songsQuantity;
         Scanner inputSongs = new Scanner(System.in);
         System.out.println("Escribe cuantas canciones vas a agregar? \n"+"Luego el Id de las canciones");
-        askSongs = inputSongs.nextInt();
+        songsQuantity = inputSongs.nextInt();
         int[] songsToAdd = new int[5];
-        for (int i = 0; i < askSongs; i++) {
+        for (int i = 0; i < songsQuantity; i++) {
            try {
             songsToAdd[i]=inputSongs.nextInt();
            } catch (Exception e) {
@@ -89,6 +121,5 @@ public class playList implements ISong{
             System.out.print("\n--------------\n");
         }
     }
-
 }
 

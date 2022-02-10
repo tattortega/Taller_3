@@ -3,7 +3,15 @@ package taller_3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Main class
+ * The program runs from here
+ */
 public class Main {
+
+	/**
+	 * Print the program instructions
+	 */
     public static void printInstructions(){
         // System.out.print("""
         //         Welcome to Taller 3\s
@@ -23,6 +31,12 @@ public class Main {
 
     }
 
+	/**
+	 * Create main library song -
+	 * Print main library. -
+	 * Executes user's input
+	 * @param args console comments
+	 */
 	public static void main(String[] args) {
 
         printInstructions();
