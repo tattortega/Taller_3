@@ -11,11 +11,12 @@ public class Main {
         //         o realizar filtros en la biblioteca principal como:\s
         //         filtro por genero o por año,\s
         //         ademas puedes ordenar por duración y fecha.\s
-        //         Escribe 1 para crear una playlist\s
-        //         Escribe 2 para filtrar por genero\s
-        //         Escribe 3 para filtrar por año\s
-        //         Escribe 4 para ordenar por duración o\s
-        //         Escribe 5 para ordenar por fecha \s
+        //         Digite 1 para crear una playlist\s
+        //         Digite 2 para filtrar por genero\s
+        //         Digite 3 para filtrar por año\s
+        //         Digite 4 para ordenar por duración o\s
+        //         Digite 5 para ordenar por fecha \s
+        //         Digite 6 para salir del programa \s
         //         \s
         //         A continuación se muestra la biblioteca principal:\s
         //         \n""");
@@ -59,7 +60,7 @@ public class Main {
 			}else if("3".equals(option)){
                 mainLibrary.filterByYear();
             }
-		}while("1".equals(option));
+		}while("6".equals(option));
 	}
 }
 

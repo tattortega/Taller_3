@@ -16,26 +16,35 @@ public class playList implements ISong{
     public void filterByGenre() {
         Scanner inputGenre = new Scanner(System.in);
         String songGenre = inputGenre.nextLine();
+        int hasMatch = 0;
         for (newSong song: playList) {
             if(song.getGenre().equals(songGenre)){
                 System.out.println("\n");
                 song.printData();
+                hasMatch +=1;
             }
         }
-        System.out.println("No se encontro ninguna coincidencia");
+        if (hasMatch == 0){
+            System.out.println("No se encontro ninguna coincidencia");
+        }
+        
     }
 
     @Override
     public void filterByYear() {
         Scanner inputYear = new Scanner(System.in);
         String songYear = inputYear.nextLine();
+        int hasMatch = 0;
         for (newSong song: playList) {
             if (song.getReleaseDate().equals(songYear)){
                 System.out.println("\n");
                 song.printData();
+                hasMatch +=1;
             }
         }
-        System.out.println("No se encontro ninguna coincidencia");
+        if (hasMatch == 0){
+            System.out.println("No se encontro ninguna coincidencia");
+        }
     }
 
     @Override
