@@ -14,15 +14,15 @@ public class Main {
 	 */
     public static void printInstructions(){
         System.out.print("""
-                Welcome to Taller 3\s
+                Welcome to Taller 3\n
                 Aqui puedes crear tu propia playlist\s
                 o realizar filtros en la biblioteca principal como:\s
                 filtro por genero o por año,\s
-                ademas puedes ordenar por duración y fecha.\s
+                ademas puedes ordenar por duración y fecha.\n
                 Digite 1 para crear una playlist\s
                 Digite 2 para filtrar por genero\s
                 Digite 3 para filtrar por año\s
-                Digite 4 para ordenar por duración o\s
+                Digite 4 para ordenar por duración \s
                 Digite 5 para ordenar por fecha \s
                 Digite 6 para salir del programa \s
                 \s
@@ -68,7 +68,7 @@ public class Main {
 		String option;
 
 		do {
-			printInstructions();
+			System.out.println("Digite la opción: ");
 			String inputUser = inputOption.nextLine();
 			String[] splitInputUser;
 			splitInputUser = inputUser.split("\\s+");
