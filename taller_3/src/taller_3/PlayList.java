@@ -38,10 +38,11 @@ public class PlayList implements ISong{
         Scanner inputGenre = new Scanner(System.in);
         String songGenre = inputGenre.nextLine();
         int anyMatch = 0;
+        System.out.println("\n Playlist filtrada por género \n");
         for (newSong song: playList) {
             if(songGenre.equals(song.getGenre())){
-                System.out.println("\n");
                 song.printData();
+                System.out.println("\n");
                 anyMatch +=1;
             }
         }
@@ -60,28 +61,51 @@ public class PlayList implements ISong{
         Scanner inputYear = new Scanner(System.in);
         String songYear = inputYear.nextLine();
         int anyMatch = 0;
+        System.out.println("\n Playlist filtrada por año \n");
         for (newSong song: playList) {
-            if (songYear.equals(song.getReleaseDate())){
-                System.out.println("\n");
+            if (songYear.equals(song.getReleaseDate())){                
                 song.printData();
+                System.out.println("\n");
                 anyMatch +=1;
             }
         }
         if (anyMatch == 0){
-            System.out.println("No se encontro ninguna coincidencia");
+            System.out.println("No se encontró ninguna coincidencia");
         }
     }
 
+    /**
+     * Polymorphism -
+     * Order by song duration. -
+     * Prints the ordered playlist.
+     */
     @Override
     public void orderByDuration(ArrayList<newSong> list) {
         list.sort((songA, songB)
                   -> songA.getDuration().compareTo(songB.getDuration())
-        );
+                  );
+        System.out.println("\n Playlist ordenada por duración de canción \n");
+        for(newSong song: playList){
+            song.printData();
+            System.out.print("\n--------------\n");
+        }
     }
 
+    /**
+     * Polymorphism -
+     * Order by song date. -
+     * Prints the ordered playlist.
+     */
     @Override
     public void orderByDate(ArrayList<newSong> list) {
-       //
+        list.sort((songA, songB)
+                -> songA.getReleaseDate().compareTo(songB.getReleaseDate())
+        );
+        System.out.println("\n Playlist ordenada por año \n");
+        for(newSong song: playList){
+            song.printData();
+            System.out.print("\n--------------\n");
+        }
     }
 
     /**
@@ -111,6 +135,7 @@ public class PlayList implements ISong{
                 newPlayList.playList.add(song);
             }
         }
+        System.out.println("\n Nueva Playlist creada \n");
         for(newSong song: newPlayList.playList){
             song.printData();
             System.out.print("\n--------------\n");

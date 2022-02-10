@@ -1,8 +1,6 @@
 package taller_3;
 
 
-import java.util.Date;
-
 /**
  * Basic attributes of a single song
  *
