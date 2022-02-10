@@ -13,21 +13,21 @@ public class Main {
 	 * Print the program instructions
 	 */
     public static void printInstructions(){
-        // System.out.print("""
-        //         Welcome to Taller 3\s
-        //         Aqui puedes crear tu propia playlist\s
-        //         o realizar filtros en la biblioteca principal como:\s
-        //         filtro por genero o por año,\s
-        //         ademas puedes ordenar por duración y fecha.\s
-        //         Digite 1 para crear una playlist\s
-        //         Digite 2 para filtrar por genero\s
-        //         Digite 3 para filtrar por año\s
-        //         Digite 4 para ordenar por duración o\s
-        //         Digite 5 para ordenar por fecha \s
-        //         Digite 6 para salir del programa \s
-        //         \s
-        //         A continuación se muestra la biblioteca principal:\s
-        //         \n""");
+        System.out.print("""
+                Welcome to Taller 3\s
+                Aqui puedes crear tu propia playlist\s
+                o realizar filtros en la biblioteca principal como:\s
+                filtro por genero o por año,\s
+                ademas puedes ordenar por duración y fecha.\s
+                Digite 1 para crear una playlist\s
+                Digite 2 para filtrar por genero\s
+                Digite 3 para filtrar por año\s
+                Digite 4 para ordenar por duración o\s
+                Digite 5 para ordenar por fecha \s
+                Digite 6 para salir del programa \s
+                \s
+                A continuación se muestra la biblioteca principal:\s
+                \n""");
 
     }
 
