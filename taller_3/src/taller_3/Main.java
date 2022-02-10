@@ -77,10 +77,18 @@ public class Main {
                 mainLibrary.filterByYear();
             }
 			else if("4".equals(option)){
-				mainLibrary.orderByDuration();
+				mainLibrary.orderByDuration(mainLibrary.playList);
+				for(newSong song: mainLibrary.playList){
+					song.printData();
+					System.out.print("\n--------------\n");
+				}
 			}
 			else if("5".equals(option)){
-				mainLibrary.orderByDate();
+				mainLibrary.orderByDate(mainLibrary.playList);
+				for(newSong song: mainLibrary.playList){
+					song.printData();
+					System.out.print("\n--------------\n");
+				}
 			}
 
 		}while(Integer.parseInt(option) < 5);
