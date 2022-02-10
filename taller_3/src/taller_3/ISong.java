@@ -23,9 +23,8 @@ public interface ISong {
     
     /**
      * Method to filter songs by year
-     * @return Return songs for the leaked year
      */
-    String filterByYear();
+    void filterByYear();
     
     /**
      * Method to sort songs by duration

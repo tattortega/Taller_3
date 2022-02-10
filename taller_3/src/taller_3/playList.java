@@ -26,8 +26,16 @@ public class playList implements ISong{
     }
 
     @Override
-    public String filterByYear() {
-        return null;
+    public void filterByYear() {
+        Scanner inputYear = new Scanner(System.in);
+        String songYear = inputYear.nextLine();
+        for (newSong song: playList) {
+            if (song.getReleaseDate().equals(songYear)){
+                System.out.println("\n");
+                song.printData();
+            }
+        }
+        System.out.println("No se encontro ninguna coincidencia");
     }
 
     @Override
