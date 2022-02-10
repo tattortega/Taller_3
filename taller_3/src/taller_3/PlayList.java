@@ -16,13 +16,13 @@ import java.util.Scanner;
  * @since 1.0.0
  */
 public class PlayList implements ISong{
-    ArrayList<newSong> playList;
+    ArrayList<NewSong> playList;
 
     /**
      * PlayList constructor
      * @param playList ArrayList<>();
      */
-    public PlayList(ArrayList<newSong> playList) {
+    public PlayList(ArrayList<NewSong> playList) {
         this.playList = playList;
     }
 
@@ -39,7 +39,7 @@ public class PlayList implements ISong{
         String songGenre = inputGenre.nextLine();
         int anyMatch = 0;
         System.out.println("\n Playlist filtrada por género \n");
-        for (newSong song: playList) {
+        for (NewSong song: playList) {
             if (songGenre.equals(song.getGenre())) {
                 song.printData();
                 System.out.println("\n");
@@ -62,7 +62,7 @@ public class PlayList implements ISong{
         String songYear = inputYear.nextLine();
         int anyMatch = 0;
         System.out.println("\n Playlist filtrada por año \n");
-        for (newSong song: playList) {
+        for (NewSong song: playList) {
             if (songYear.equals(song.getReleaseDate())) {
                 song.printData();
                 System.out.println("\n");
@@ -80,12 +80,12 @@ public class PlayList implements ISong{
      * Prints the ordered playlist.
      */
     @Override
-    public void orderByDuration(ArrayList<newSong> list) {
+    public void orderByDuration(ArrayList<NewSong> list) {
         list.sort((songA, songB)
                   -> songA.getDuration().compareTo(songB.getDuration())
         );
         System.out.println("\n Playlist ordenada por duración de canción \n");
-        for (newSong song: playList) {
+        for (NewSong song: playList) {
             song.printData();
             System.out.print("\n--------------\n");
         }
@@ -97,12 +97,12 @@ public class PlayList implements ISong{
      * Prints the ordered playlist.
      */
     @Override
-    public void orderByDate(ArrayList<newSong> list) {
+    public void orderByDate(ArrayList<NewSong> list) {
         list.sort((songA, songB)
                 -> songA.getReleaseDate().compareTo(songB.getReleaseDate())
         );
         System.out.println("\n Playlist ordenada por año \n");
-        for (newSong song: playList) {
+        for (NewSong song: playList) {
             song.printData();
             System.out.print("\n--------------\n");
         }
@@ -131,7 +131,7 @@ public class PlayList implements ISong{
            }
         }
 
-        for (newSong song: playList) {
+        for (NewSong song: playList) {
             int songId = song.getId();
             if (Arrays.stream(songsToAdd).anyMatch(i -> i == songId)) {
                 newPlayList.playList.add(song);
@@ -139,7 +139,7 @@ public class PlayList implements ISong{
         }
 
         System.out.println("\n Nueva Playlist creada \n");
-        for (newSong song: newPlayList.playList) {
+        for (NewSong song: newPlayList.playList) {
             song.printData();
             System.out.print("\n--------------\n");
         }

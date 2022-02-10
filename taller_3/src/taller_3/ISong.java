@@ -31,13 +31,13 @@ public interface ISong {
      * Method to sort songs by duration
      * Print Songs sorted in ascending order of duration
      */
-    void orderByDuration(ArrayList<newSong> list);
+    void orderByDuration(ArrayList<NewSong> list);
 
     /**
      * Method to sort songs by date
      * Print Songs sorted by date ascendingly
      */
-    void orderByDate(ArrayList<newSong> list);
+    void orderByDate(ArrayList<NewSong> list);
     
     /**
      * Method to create playlist of specific songs
