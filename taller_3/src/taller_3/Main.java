@@ -3,7 +3,15 @@ package taller_3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Main class
+ * The program runs from here
+ */
 public class Main {
+
+	/**
+	 * Print the program instructions
+	 */
     public static void printInstructions(){
         // System.out.print("""
         //         Welcome to Taller 3\s
@@ -23,11 +31,17 @@ public class Main {
 
     }
 
+	/**
+	 * Create main library song -
+	 * Print main library. -
+	 * Executes user's input
+	 * @param args console comments
+	 */
 	public static void main(String[] args) {
 
         printInstructions();
 
-        playList mainLibrary = new playList(new ArrayList<>());
+        PlayList mainLibrary = new PlayList(new ArrayList<>());
         mainLibrary.playList.add(new newSong(1,"hello you", "2020", 3.15, "pop",
                 "helloyou.png", "about you", "jhon doe", "jhon smit"));
         mainLibrary.playList.add(new newSong(2,"among us", "2012", 2.13, "jazz",
@@ -44,12 +58,13 @@ public class Main {
 			System.out.print("\n--------------\n");
 		}
 
-		Scanner sc = new Scanner(System.in);
+		Scanner inputOption = new Scanner(System.in);
 		String option;
 
 		do{
-			String inputUser = sc.nextLine();
-			String[] splitInputUser = inputUser.split("\\s+");
+			String inputUser = inputOption.nextLine();
+			String[] splitInputUser;
+			splitInputUser = inputUser.split("\\s+");
 			option = splitInputUser[0];
 
 			if ("1".equals(option)){
@@ -57,10 +72,26 @@ public class Main {
 			}
 			else if("2".equals(option)){
 				mainLibrary.filterByGenre();
-			}else if("3".equals(option)){
+			}
+			else if("3".equals(option)){
                 mainLibrary.filterByYear();
             }
-		}while("6".equals(option));
+			else if("4".equals(option)){
+				mainLibrary.orderByDuration(mainLibrary.playList);
+				for(newSong song: mainLibrary.playList){
+					song.printData();
+					System.out.print("\n--------------\n");
+				}
+			}
+			else if("5".equals(option)){
+				mainLibrary.orderByDate(mainLibrary.playList);
+				for(newSong song: mainLibrary.playList){
+					song.printData();
+					System.out.print("\n--------------\n");
+				}
+			}
+
+		}while(Integer.parseInt(option) < 5);
 	}
 }
 
