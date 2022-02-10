@@ -54,9 +54,9 @@ public class Main {
                 "antartica.png", "antartica", "luis sands", "milena cess"));
         mainLibrary.playList.add(new newSong(6,"in the end", "2004", 4.25, "rock",
                 "intheend.png", "in the end", "chester benington", "linkin park"));
-		mainLibrary.playList.add(new newSong(7,"bangarag", "2008", 3.57, "electronic",
+	mainLibrary.playList.add(new newSong(7,"bangarag", "2008", 3.57, "electronic",
                 "bangarag.png", "bangarag", "skryllex", "skryllex"));			
-	    mainLibrary.playList.add(new newSong(8,"sin ti sin mi", "2014", 3.33, "pop rock",
+	mainLibrary.playList.add(new newSong(8,"sin ti sin mi", "2014", 3.33, "pop rock",
                 "sintisinmi.png", "sin ti sin mi", "bako", "the mills"));
 		
 		for (newSong song: mainLibrary.playList) {
@@ -79,8 +79,8 @@ public class Main {
 			} else if ("2".equals(option)) {
 				mainLibrary.filterByGenre();
 			} else if ("3".equals(option)) {
-                mainLibrary.filterByYear();
-            } else if ("4".equals(option)) {
+                                mainLibrary.filterByYear();
+                        } else if ("4".equals(option)) {
 				mainLibrary.orderByDuration(mainLibrary.playList);
 			} else if ("5".equals(option)) {
 				mainLibrary.orderByDate(mainLibrary.playList);
